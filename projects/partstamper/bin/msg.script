@@ -1,0 +1,11 @@
+#!/bin/sh
+
+ipcs -q | awk '/0x00002000/ { system ("ipcrm msg " $2 " >/dev/null") }'
+ipcs -q | awk '/0x00002001/ { system ("ipcrm msg " $2 " >/dev/null") }'
+ipcs -q | awk '/0x00002002/ { system ("ipcrm msg " $2 " >/dev/null") }'
+ipcs -q | awk '/0x00002003/ { system ("ipcrm msg " $2 " >/dev/null") }'
+ipcs -q | awk '/0x00002004/ { system ("ipcrm msg " $2 " >/dev/null") }'
+ipcs -q | awk '/0x00002005/ { system ("ipcrm msg " $2 " >/dev/null") }'
+ipcs -q | awk '/0x00002006/ { system ("ipcrm msg " $2 " >/dev/null") }'
+ipcs -q | awk '/0x00002007/ { system ("ipcrm msg " $2 " >/dev/null") }'
+

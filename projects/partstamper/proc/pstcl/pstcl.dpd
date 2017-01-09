@@ -1,0 +1,20 @@
+pstcl : /home/tmike/project/ucla/projects/partstamper/lib/lib/libio.a 
+pstcl : /home/tmike/project/ucla/projects/partstamper/lib/lib/libmessage.a
+pstcl : /home/tmike/project/ucla/projects/partstamper/lib/lib/libmemory.a
+pstcl : /home/tmike/project/ucla/projects/partstamper/lib/lib/liblog.a
+pstcl.o: pstcl.c \
+  /home/tmike/project/ucla/projects/partstamper/include/message.h \
+  /home/tmike/project/ucla/projects/partstamper/include/process.h \
+  /home/tmike/project/ucla/projects/partstamper/include/memory.h \
+  /home/tmike/project/ucla/projects/partstamper/include/log.h
+rt_showsched.o: rt_showsched.c rt.h
+rt_rt.o: rt_rt.c rt.h
+rt_parse.o: rt_parse.c rt.h
+sendcmd.o: sendcmd.c \
+  /home/tmike/project/ucla/projects/partstamper/include/message.h \
+  /home/tmike/project/ucla/projects/partstamper/include/process.h \
+  /home/tmike/project/ucla/projects/partstamper/include/log.h \
+  /home/tmike/project/ucla/projects/partstamper/include/io.h \
+  /home/tmike/project/ucla/projects/partstamper/include/pstamper.h \
+  /home/tmike/project/ucla/projects/partstamper/include/smachine.h \
+  /home/tmike/project/ucla/projects/partstamper/include/ui.h

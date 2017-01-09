@@ -1,0 +1,31 @@
+
+include $(PROJROOT)/make/project.make
+
+# directory name of this leaf
+#############################
+LEAF = 
+
+#############################################
+# source file list in this directory, fill in
+#  CFILES         (*.c)
+#  CCFILES        (*.cc)
+#  CPPFILES       (*.cpp)
+#############################################
+CFILES = $(LEAF).c
+CCFILES =
+CPPFILES =
+
+# add system libraries here
+# -l<library>
+###########################
+LDSYSLIBS +=
+
+# add local libraries here
+# LDLOCLIBS += -l<library>
+##########################
+LDLOCLIBS +=
+
+include $(MAKEINC)/target.process
+
+include $(LEAF).dpd
+

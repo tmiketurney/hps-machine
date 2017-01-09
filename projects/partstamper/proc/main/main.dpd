@@ -1,0 +1,10 @@
+main : /home/tmike/project/ucla/projects/partstamper/lib/lib/libio.a 
+main : /home/tmike/project/ucla/projects/partstamper/lib/lib/libmessage.a
+main : /home/tmike/project/ucla/projects/partstamper/lib/lib/libmemory.a
+main : /home/tmike/project/ucla/projects/partstamper/lib/lib/liblog.a
+main.o: main.c \
+  /home/tmike/project/ucla/projects/partstamper/include/message.h \
+  /home/tmike/project/ucla/projects/partstamper/include/process.h \
+  /home/tmike/project/ucla/projects/partstamper/include/memory.h \
+  /home/tmike/project/ucla/projects/partstamper/include/log.h \
+  /home/tmike/project/ucla/projects/partstamper/include/io.h

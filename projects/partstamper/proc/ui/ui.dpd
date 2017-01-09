@@ -1,0 +1,5 @@
+ui : /home/tmike/project/ucla/projects/partstamper/lib/lib/libio.a 
+ui : /home/tmike/project/ucla/projects/partstamper/lib/lib/libmessage.a
+ui : /home/tmike/project/ucla/projects/partstamper/lib/lib/libmemory.a
+ui : /home/tmike/project/ucla/projects/partstamper/lib/lib/liblog.a
+ui.o: ui.c

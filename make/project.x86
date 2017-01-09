@@ -1,0 +1,29 @@
+#####################################################################
+#
+# FILE : project.x86
+#
+# DESC : x86 project make include file for x86 specific
+#        defines macros, implicit rules, etc.
+#
+# CVS  : $Id: project.x86,v 1.1 2003/08/26 19:20:45 tmike Exp $
+#
+#        $Log: project.x86,v $
+#        Revision 1.1  2003/08/26 19:20:45  tmike
+#        Initial check-in of RPMS : Recursive Project Make System
+#
+#
+#	Copyright (c) 2003 Tools Made Tough
+#
+#####################################################################
+
+###############
+# Project Tools
+###############
+CC  = 586-gcc
+CPP = 586-g++
+AR  = 586-ar
+
+# System root for this project
+##############################
+SYSROOT = $(PROJROOT)/system
+

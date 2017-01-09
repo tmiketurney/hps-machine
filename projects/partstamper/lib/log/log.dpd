@@ -1,0 +1,14 @@
+log.o: log.c \
+  /home/tmike/project/ucla/projects/partstamper/include/message.h \
+  /home/tmike/project/ucla/projects/partstamper/include/process.h \
+  /home/tmike/project/ucla/projects/partstamper/include/memory.h \
+  /home/tmike/project/ucla/projects/partstamper/include/log.h \
+  /home/tmike/project/ucla/projects/partstamper/include/io.h
+dump_msg.o: dump_msg.c \
+  /home/tmike/project/ucla/projects/partstamper/include/message.h \
+  /home/tmike/project/ucla/projects/partstamper/include/process.h \
+  /home/tmike/project/ucla/projects/partstamper/include/log.h \
+  /home/tmike/project/ucla/projects/partstamper/include/io.h \
+  /home/tmike/project/ucla/projects/partstamper/include/smachine.h \
+  /home/tmike/project/ucla/projects/partstamper/include/pstamper.h \
+  /home/tmike/project/ucla/projects/partstamper/include/ui.h

@@ -1,0 +1,8 @@
+cat ./io.h | pr | lpr
+cat ./log.h | pr | lpr
+cat ./message.h | pr | lpr
+cat ./process.h | pr | lpr
+cat ./smachine.h | pr | lpr
+cat ./pstamper.h | pr | lpr
+cat ./memory.h | pr | lpr
+cat ./ui.h | pr | lpr

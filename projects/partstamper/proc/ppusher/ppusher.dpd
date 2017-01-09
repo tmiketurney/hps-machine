@@ -1,0 +1,11 @@
+ppusher : /home/tmike/project/ucla/projects/partstamper/lib/lib/libio.a 
+ppusher : /home/tmike/project/ucla/projects/partstamper/lib/lib/libmessage.a
+ppusher : /home/tmike/project/ucla/projects/partstamper/lib/lib/libmemory.a
+ppusher : /home/tmike/project/ucla/projects/partstamper/lib/lib/liblog.a
+ppusher.o: ppusher.c \
+  /home/tmike/project/ucla/projects/partstamper/include/message.h \
+  /home/tmike/project/ucla/projects/partstamper/include/process.h \
+  /home/tmike/project/ucla/projects/partstamper/include/memory.h \
+  /home/tmike/project/ucla/projects/partstamper/include/log.h \
+  /home/tmike/project/ucla/projects/partstamper/include/io.h \
+  /home/tmike/project/ucla/projects/partstamper/include/pstamper.h

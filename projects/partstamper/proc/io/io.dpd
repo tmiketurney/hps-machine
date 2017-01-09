@@ -1,0 +1,21 @@
+io : /home/tmike/project/ucla/projects/partstamper/lib/lib/libio.a 
+io : /home/tmike/project/ucla/projects/partstamper/lib/lib/libmessage.a
+io : /home/tmike/project/ucla/projects/partstamper/lib/lib/libmemory.a
+io : /home/tmike/project/ucla/projects/partstamper/lib/lib/liblog.a
+io.o: io.c \
+ /home/tmike/project/ucla/projects/partstamper/include/message.h \
+ /home/tmike/project/ucla/projects/partstamper/include/process.h \
+ /home/tmike/project/ucla/projects/partstamper/include/memory.h \
+ /home/tmike/project/ucla/projects/partstamper/include/log.h \
+ /home/tmike/project/ucla/projects/partstamper/include/io.h
+io_handlers.o: io_handlers.c \
+ /home/tmike/project/ucla/projects/partstamper/include/message.h \
+ /home/tmike/project/ucla/projects/partstamper/include/process.h \
+ /home/tmike/project/ucla/projects/partstamper/include/log.h \
+ /home/tmike/project/ucla/projects/partstamper/include/io.h \
+ /home/tmike/project/ucla/projects/partstamper/include/smachine.h
+io_simulate.o: io_simulate.c \
+ /home/tmike/project/ucla/projects/partstamper/include/message.h \
+ /home/tmike/project/ucla/projects/partstamper/include/process.h \
+ /home/tmike/project/ucla/projects/partstamper/include/log.h \
+ /home/tmike/project/ucla/projects/partstamper/include/io.h

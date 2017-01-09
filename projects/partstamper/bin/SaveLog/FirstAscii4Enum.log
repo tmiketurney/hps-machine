@@ -1,0 +1,99 @@
+[    TRACE]06:35:34:602:  **PROCESS CREATION**[main.c][211].main(this_proc[6]).
+[      SHM]06:35:34:606:  [PROC_main]..shm_type[0].shm_id[0].shm_key[0].shm_size[0].shm_flags[0].shm_ptr[0].
+[      SHM]06:35:34:609:  [PROC_main]..shm_type[0].shm_id[0].shm_key[0].shm_size[0].shm_flags[0].shm_ptr[0].
+[      MSG]06:35:34:612:  [PROC_main]..i[0].que_id[e0000].que_key[2000].que_flags[bff].
+[      MSG]06:35:34:620:  [PROC_main]..i[1].que_id[e8001].que_key[2001].que_flags[bff].
+[      MSG]06:35:34:623:  [PROC_main]..i[2].que_id[f0002].que_key[2002].que_flags[bff].
+[      MSG]06:35:34:627:  [PROC_main]..i[3].que_id[f8003].que_key[2003].que_flags[bff].
+[      MSG]06:35:34:630:  [PROC_main]..i[4].que_id[100004].que_key[2004].que_flags[bff].
+[      MSG]06:35:34:632:  [PROC_main]..i[5].que_id[108005].que_key[2005].que_flags[bff].
+[      MSG]06:35:34:635:  [PROC_main]..i[6].que_id[110006].que_key[2006].que_flags[bff].
+[    TRACE]06:35:34:670:  **PROCESS CREATION**[pgrabber.c][216].pgrabber(this_proc[0]).
+[    TRACE]06:35:34:686:  **PROCESS CREATION**[ppusher.c][201].ppusher(this_proc[1]).
+[    TRACE]06:35:34:641:  [PROC_main][main.c][116].ENTERING generic_msg_init(134521975).
+[      SHM]06:35:34:694:  [PROC_pgrabber]..shm_type[314].shm_id[e0000].shm_key[2000].shm_size[2559].shm_flags[fc].shm_ptr[67702f2e].
+[    TRACE]06:35:34:709:  **PROCESS CREATION**[pstamper.c][201].pstamper(this_proc[2]).
+[      SHM]06:35:34:713:  [PROC_ppusher]..shm_type[314].shm_id[e0000].shm_key[2000].shm_size[2559].shm_flags[fc].shm_ptr[67702f2e].
+[    TRACE]06:35:34:733:  [PROC_main][main.c][116].EXITING generic_msg_init(134521975).
+[      SHM]06:35:34:735:  [PROC_pgrabber]..shm_type[1].shm_id[1].shm_key[1].shm_size[1].shm_flags[1].shm_ptr[1].
+[      SHM]06:35:34:740:  [PROC_pstamper]..shm_type[314].shm_id[e0000].shm_key[2000].shm_size[2559].shm_flags[fc].shm_ptr[67702f2e].
+[      SHM]06:35:34:742:  [PROC_ppusher]..shm_type[1].shm_id[1].shm_key[1].shm_size[1].shm_flags[1].shm_ptr[1].
+[    TRACE]06:35:34:738:  **PROCESS CREATION**[smachine.c][158].smachine(this_proc[3]).
+[    TRACE]06:35:34:745:  [PROC_main][main.c][133].ENTERING msg_send( 804e1e8 ).
+[      MSG]06:35:34:747:  [PROC_pgrabber]..i[0].que_id[e0000].que_key[2000].que_flags[9ff].
+[      SHM]06:35:34:750:  [PROC_pstamper]..shm_type[1].shm_id[1].shm_key[1].shm_size[1].shm_flags[1].shm_ptr[1].
+[      MSG]06:35:34:752:  [PROC_ppusher]..i[0].que_id[e0000].que_key[2000].que_flags[9ff].
+[      SHM]06:35:34:754:  [PROC_smachine]..shm_type[314].shm_id[e0000].shm_key[2000].shm_size[2559].shm_flags[fc].shm_ptr[67702f2e].
+[    DEBUG]06:35:34:756:  [PROC_main][dump_msg.c][171].default on message type[4].
+[      MSG]06:35:34:757:  [PROC_pgrabber]..i[1].que_id[e8001].que_key[2001].que_flags[9ff].
+[      MSG]06:35:34:760:  [PROC_pstamper]..i[0].que_id[e0000].que_key[2000].que_flags[9ff].
+[      MSG]06:35:34:761:  [PROC_ppusher]..i[1].que_id[e8001].que_key[2001].que_flags[9ff].
+[      SHM]06:35:34:764:  [PROC_smachine]..shm_type[1].shm_id[1].shm_key[1].shm_size[1].shm_flags[1].shm_ptr[1].
+[    TRACE]06:35:34:766:  [PROC_main][main.c][133].EXITING msg_send( 804e1e8 ).[0].
+[      MSG]06:35:34:767:  [PROC_pgrabber]..i[2].que_id[f0002].que_key[2002].que_flags[9ff].
+[      MSG]06:35:34:770:  [PROC_pstamper]..i[1].que_id[e8001].que_key[2001].que_flags[9ff].
+[      MSG]06:35:34:772:  [PROC_ppusher]..i[2].que_id[f0002].que_key[2002].que_flags[9ff].
+[      MSG]06:35:34:774:  [PROC_smachine]..i[0].que_id[e0000].que_key[2000].que_flags[9ff].
+[    TRACE]06:35:34:776:  [PROC_main][main.c][138].ENTERING msg_send( 804e1e8 ).
+[      MSG]06:35:34:778:  [PROC_pgrabber]..i[3].que_id[f8003].que_key[2003].que_flags[9ff].
+[      MSG]06:35:34:781:  [PROC_pstamper]..i[2].que_id[f0002].que_key[2002].que_flags[9ff].
+[      MSG]06:35:34:783:  [PROC_ppusher]..i[3].que_id[f8003].que_key[2003].que_flags[9ff].
+[      MSG]06:35:34:785:  [PROC_smachine]..i[1].que_id[e8001].que_key[2001].que_flags[9ff].
+[    DEBUG]06:35:34:788:  [PROC_main][dump_msg.c][171].default on message type[4].
+[      MSG]06:35:34:789:  [PROC_pgrabber]..i[4].que_id[100004].que_key[2004].que_flags[9ff].
+[      MSG]06:35:34:792:  [PROC_pstamper]..i[3].que_id[f8003].que_key[2003].que_flags[9ff].
+[      MSG]06:35:34:793:  [PROC_ppusher]..i[4].que_id[100004].que_key[2004].que_flags[9ff].
+[    TRACE]06:35:34:797:  [PROC_main][main.c][138].EXITING msg_send( 804e1e8 ).[0].
+[      MSG]06:35:34:799:  [PROC_pgrabber]..i[5].que_id[108005].que_key[2005].que_flags[9ff].
+[      MSG]06:35:34:801:  [PROC_pstamper]..i[4].que_id[100004].que_key[2004].que_flags[9ff].
+[      MSG]06:35:34:803:  [PROC_ppusher]..i[5].que_id[108005].que_key[2005].que_flags[9ff].
+[    TRACE]06:35:34:807:  [PROC_main][main.c][143].ENTERING msg_send( 804e1e8 ).
+[      MSG]06:35:34:808:  [PROC_pgrabber]..i[6].que_id[110006].que_key[2006].que_flags[9ff].
+[      MSG]06:35:34:796:  [PROC_smachine]..i[2].que_id[f0002].que_key[2002].que_flags[9ff].
+[      MSG]06:35:34:810:  [PROC_pstamper]..i[5].que_id[108005].que_key[2005].que_flags[9ff].
+[      MSG]06:35:34:812:  [PROC_ppusher]..i[6].que_id[110006].que_key[2006].que_flags[9ff].
+[    DEBUG]06:35:34:814:  [PROC_main][dump_msg.c][171].default on message type[4].
+[      MSG]06:35:34:819:  [PROC_smachine]..i[3].que_id[f8003].que_key[2003].que_flags[9ff].
+[      MSG]06:35:34:820:  [PROC_pstamper]..i[6].que_id[110006].que_key[2006].que_flags[9ff].
+[    TRACE]06:35:34:823:  [PROC_main][main.c][143].EXITING msg_send( 804e1e8 ).[0].
+[      MSG]06:35:34:825:  [PROC_smachine]..i[4].que_id[100004].que_key[2004].que_flags[9ff].
+[    TRACE]06:35:34:828:  [PROC_main][main.c][148].ENTERING msg_send( 804e1e8 ).
+[      MSG]06:35:34:830:  [PROC_smachine]..i[5].que_id[108005].que_key[2005].que_flags[9ff].
+[    DEBUG]06:35:34:832:  [PROC_main][dump_msg.c][171].default on message type[4].
+[      MSG]06:35:34:833:  [PROC_smachine]..i[6].que_id[110006].que_key[2006].que_flags[9ff].
+[    TRACE]06:35:34:836:  [PROC_main][main.c][148].EXITING msg_send( 804e1e8 ).[0].
+[      SHM]06:38:52:120:  [PROC_tcl]..shm_type[314].shm_id[e0000].shm_key[2000].shm_size[2559].shm_flags[fc].shm_ptr[67702f2e].
+[      SHM]06:38:52:124:  [PROC_tcl]..shm_type[1].shm_id[1].shm_key[1].shm_size[1].shm_flags[1].shm_ptr[1].
+[      MSG]06:38:52:127:  [PROC_tcl]..i[0].que_id[e0000].que_key[2000].que_flags[9ff].
+[      MSG]06:38:52:129:  [PROC_tcl]..i[1].que_id[e8001].que_key[2001].que_flags[9ff].
+[      MSG]06:38:52:132:  [PROC_tcl]..i[2].que_id[f0002].que_key[2002].que_flags[9ff].
+[      MSG]06:38:52:134:  [PROC_tcl]..i[3].que_id[f8003].que_key[2003].que_flags[9ff].
+[      MSG]06:38:52:136:  [PROC_tcl]..i[4].que_id[100004].que_key[2004].que_flags[9ff].
+[      MSG]06:38:52:139:  [PROC_tcl]..i[5].que_id[108005].que_key[2005].que_flags[9ff].
+[      MSG]06:38:52:141:  [PROC_tcl]..i[6].que_id[110006].que_key[2006].que_flags[9ff].
+[      SHM]06:38:52:143:  [PROC_tcl]..i[0].proc_id[314].que_id[e0000].que_key[2000].que_flags[9ff].msg_size[252].message[0]..
+[      SHM]06:38:52:146:  [PROC_tcl]..i[1].proc_id[315].que_id[e8001].que_key[2001].que_flags[9ff].msg_size[252].message[0]..
+[      SHM]06:38:52:148:  [PROC_tcl]..i[2].proc_id[316].que_id[f0002].que_key[2002].que_flags[9ff].msg_size[252].message[0]..
+[      SHM]06:38:52:151:  [PROC_tcl]..i[3].proc_id[317].que_id[f8003].que_key[2003].que_flags[9ff].msg_size[252].message[1]..
+[      SHM]06:38:52:153:  [PROC_tcl]..i[4].proc_id[-1].que_id[100004].que_key[2004].que_flags[9ff].msg_size[252].message[2]..
+[      SHM]06:38:52:156:  [PROC_tcl]..i[5].proc_id[-1].que_id[108005].que_key[2005].que_flags[9ff].msg_size[252].message[4]..
+[      SHM]06:38:52:158:  [PROC_tcl]..i[6].proc_id[-1].que_id[110006].que_key[2006].que_flags[9ff].msg_size[252].message[4]..
+[      SHM]06:44:12:476:  [PROC_tcl]..shm_type[314].shm_id[e0000].shm_key[2000].shm_size[2559].shm_flags[fc].shm_ptr[67702f2e].
+[      SHM]06:44:12:480:  [PROC_tcl]..shm_type[1].shm_id[1].shm_key[1].shm_size[1].shm_flags[1].shm_ptr[1].
+[      MSG]06:44:12:482:  [PROC_tcl]..i[0].que_id[e0000].que_key[2000].que_flags[9ff].
+[      MSG]06:44:12:485:  [PROC_tcl]..i[1].que_id[e8001].que_key[2001].que_flags[9ff].
+[      MSG]06:44:12:487:  [PROC_tcl]..i[2].que_id[f0002].que_key[2002].que_flags[9ff].
+[      MSG]06:44:12:490:  [PROC_tcl]..i[3].que_id[f8003].que_key[2003].que_flags[9ff].
+[      MSG]06:44:12:492:  [PROC_tcl]..i[4].que_id[100004].que_key[2004].que_flags[9ff].
+[      MSG]06:44:12:495:  [PROC_tcl]..i[5].que_id[108005].que_key[2005].que_flags[9ff].
+[      MSG]06:44:12:497:  [PROC_tcl]..i[6].que_id[110006].que_key[2006].que_flags[9ff].
+[    TRACE]06:44:18:860:  [PROC_tcl].ENTERING sendcmdCmd( argc[1] ).
+[    TRACE]06:44:54:283:  [PROC_tcl].ENTERING sendcmdCmd( argc[2] ).
+[    TRACE]06:44:54:286:  [PROC_tcl].ENTERING build_smachine_msg( gm[80589c8] interactive[1] ).
+[      TCL]06:45:04:484:  [PROC_tcl][sendcmd.c][484].SMCM(command[sm_return_state].continuous[-1].iobl[io_turn_off].value[-1]).
+[    TRACE]06:45:04:490:  [PROC_smachine].ENTERING h_state_ehardware( gm[8050be8] gm->mp.message[SM_COMMAND_MSG] ).
+[SMACHINE]06:45:04:493:  [PROC_smachine]..h_state_ehardware( command[sm_return_state].continuous[-1].iobl[io_turn_off].value[-1] ).
+[    TRACE]06:45:04:495:  [PROC_smachine].EXITING h_state_ehardware( gm[8050be8] gm->mp.message[SM_COMMAND_MSG] ).
+[    TRACE]06:45:04:498:  [PROC_tcl].ENTERING parse_smachine_msg( gm[80589c8] ).sender(3).
+[    TRACE]06:45:04:500:  [PROC_tcl].EXITING parse_smachine_msg( gm[80589c8] ).sender(3).
+[    TRACE]06:45:04:503:  [PROC_tcl].EXITING sendcmd [0].

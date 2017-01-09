@@ -1,0 +1,7 @@
+#!/bin/sh
+
+./shm.script
+./msg.script
+rm -f *.log
+rm -f core*
+

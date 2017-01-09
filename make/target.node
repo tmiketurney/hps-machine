@@ -1,0 +1,63 @@
+#####################################################################
+#
+# FILE : target.node
+#
+# DESC : All generic node targets are defined here
+#
+# CVS  : $Id: target.node,v 1.1 2003/08/26 19:20:45 tmike Exp $
+#
+#	$Log: target.node,v $
+#	Revision 1.1  2003/08/26 19:20:45  tmike
+#	Initial check-in of RPMS : Recursive Project Make System
+#	
+#
+#	Copyright (c) 2003 Tools Made Tough
+#
+#####################################################################
+
+###########################################################
+all :
+	@for d in $(DIRS) ;\
+		do echo "...making ALL in $$d..." ;\
+		cd $$d ;\
+		$(MAKE) all ;\
+		cd .. ;\
+	done
+
+
+###########################################################
+clean :
+	@for d in $(DIRS) ;\
+		do echo "...making CLEAN in $$d..." ;\
+		cd $$d ;\
+		$(MAKE) clean ;\
+		cd .. ;\
+	done
+
+###########################################################
+depend :
+	@for d in $(DIRS) ;\
+		do echo "...making DEPEND in $$d..." ;\
+		cd $$d ;\
+		$(MAKE) depend ;\
+		cd .. ;\
+	done
+
+###########################################################
+install :
+	@for d in $(DIRS) ;\
+		do echo "...making INSTALL in $$d..." ;\
+		cd $$d ;\
+		$(MAKE) install ;\
+		cd .. ;\
+	done
+
+###########################################################
+uninstall :
+	@for d in $(DIRS) ;\
+		do echo "...making UNINSTALL in $$d..." ;\
+		cd $$d ;\
+		$(MAKE) uninstall ;\
+		cd .. ;\
+	done
+

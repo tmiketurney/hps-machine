@@ -1,0 +1,30 @@
+#####################################################################
+#
+# FILE : project.host
+#
+# DESC : host project make include file for host specific
+#        defines macros, implicit rules, etc.
+#
+# CVS  : $Id: project.host,v 1.1 2003/09/23 23:59:48 tmike Exp $
+#
+#        $Log: project.host,v $
+#        Revision 1.1  2003/09/23 23:59:48  tmike
+#        PartStamper version with working IPC
+#
+#
+#
+#	Copyright (c) 2003 Tools Made Tough
+#
+#####################################################################
+
+###############
+# Project Tools
+###############
+CC  = gcc
+CPP = g++
+AR  = ar
+
+# System root for this project
+##############################
+SYSROOT = $(PROJROOT)/system
+

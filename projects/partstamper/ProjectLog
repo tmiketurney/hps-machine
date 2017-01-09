@@ -1,0 +1,52 @@
+[07.October.2003]
+
+cvs tag "PartStamper-StateProblem"
+
+Need to re-evaluate project at this point:
+
+1) Log file is not as helpful as expected
+    a) Ascii strings instead of enum
+    b) __FILE__ and __LINE__ need to come from caller
+    c) too much stuff
+
+2) State Machine testing has uncovered problems
+   with I/O task and command message semantics
+
+3) msg_receive should be IPC_WAIT
+
+4) verify no memory leak
+
+5) diagram SW
+
+6) Conditional Compile Log
+
+
+Tools to use, explore:
+    a) cbrowser
+    b) cscope
+    c) dmalloc
+    d) ???
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Power of the Delta Approach to Design
+=====================================
+
+Design  Top-Down
+        Out-In
+
+Do basic design up to logical point A.
+This logical point must have quantifiable objectives, e.g.
+    Build Project Infrastructure
+    Define Process-Level modules
+    Define Process Interfaces
+    Build "soft" I/O layer with "Perfect" simulator
+    Build Tcl test harness
+
+STOP, take a breath, learn the lessons.
+
+Fix the problems discovered doing Logical Point A
+
+Do basic design up to logical point B.
+...
+

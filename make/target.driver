@@ -1,0 +1,25 @@
+#####################################################################
+#
+# FILE : target.driver
+#
+# DESC : Driver leaf targets are defined here
+#
+# CVS  : $Id: target.driver,v 1.1 2003/08/26 19:20:45 tmike Exp $
+#
+#        $Log: target.driver,v $
+#        Revision 1.1  2003/08/26 19:20:45  tmike
+#        Initial check-in of RPMS : Recursive Project Make System
+#
+#
+#	Copyright (c) 2003 Tools Made Tough
+#
+#####################################################################
+
+all : $(OBJECTS)
+
+install : $(OBJECTS)
+	@for module in $(OBJECTS) ; do \
+		echo Installing $$module...; \
+		cp -f $$module $(MODULE_DIR) ; \
+	done
+

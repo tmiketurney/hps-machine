@@ -1,0 +1,131 @@
+
+
+##############################################
+# Command to build internal Tcl array with
+# live process information.  Verbose parameter
+# controls whether info is displayed
+##############################################
+proc pslist { {verbose 1} } {
+    global psList   # Tcl array of process data
+    global psEnd    # count of processes in array
+
+    # run Linux ps command for data source
+    ######################################
+    exec ps -ef > /tmp/tcl
+
+    # init local vars
+    #################
+    set fileId [open /tmp/tcl r]
+    set index 0
+
+    # step through data file, one line at a time,
+    # saving all data internally for other Tcl commands
+    # index 0 entry is description information
+    ###################################################
+    while {[gets $fileId line] >= 0} {
+        if { $verbose == 1 } {
+            puts $line
+        }
+        scan $line {%[!-~] %[!-~] %[!-~] %[!-~] %[!-~] %[!-~] %[!-~] %[!-~]} uid pid ppid c stime tty time cmd
+
+        set psList($index,uid) $uid
+        set psList($index,pid) $pid
+        set psList($index,ppid) $ppid
+        set psList($index,c) $c
+        set psList($index,stime) $stime
+        set psList($index,tty) $tty
+        set psList($index,time) $time
+        set psList($index,cmd) $cmd
+
+        incr index
+    }
+
+    # last process is 'ps -ef', which we don't care about
+    #####################################################
+    set psEnd [expr $index - 1]
+
+    close $fileId
+}
+
+
+#
+##################################
+# Command to sort process IDs into
+# system and application pools
+# System proces = PPID [0|1]
+##################################
+proc pssort {} {
+    global psList   # Tcl array of process data
+    global psEnd    # count of processes in array
+    global psApp    # Tcl list of application PIDs
+    global psSys    # Tcl list of system PIDs
+
+    # update internal process info
+    ##############################
+    pslist 0
+
+    # zero out lists
+    ################
+    set psApp [ list ]
+    set psSys [ list ]
+
+    # step through process array, checking PPID
+    # index 0 is description info
+    ###########################################
+    for {set i 1} {$i <= $psEnd} {incr i} {
+        if { $psList($i,ppid) == 0 } {
+            lappend psSys $i
+        } elseif { $psList($i,ppid) == 1 } {
+            lappend psSys $i
+        } else {
+            lappend psApp $i
+        }
+    }
+}
+
+
+#
+############################################
+# Command to show scheduling information for
+# each application process
+############################################
+proc appsched { {verbose 1} } {
+    global psApp
+    global psList
+
+    pssort
+
+    foreach i $psApp {
+        set result [ showsched $psList($i,pid) ]
+        if {$verbose == 1} {
+            puts "$result  $psList($i,cmd)"
+        } else {
+            puts $result
+        }
+    }
+}
+
+
+############################################
+# Command to show scheduling information for
+# each system process
+############################################
+proc syssched { {verbose 1} } {
+    global psSys
+    global psList
+
+    pssort
+
+    foreach i $psSys {
+        set result [ showsched $psList($i,pid) ]
+        if {$verbose == 1} {
+            puts "$result  $psList($i,cmd)"
+        } else {
+            puts $result
+        }
+    }
+}
+
+
+#####  END OF FILE HERE
+

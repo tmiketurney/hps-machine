@@ -1,0 +1,2 @@
+export PROJROOT=`pwd`
+

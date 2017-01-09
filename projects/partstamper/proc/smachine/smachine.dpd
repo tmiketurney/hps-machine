@@ -1,0 +1,26 @@
+smachine : /home/tmike/project/ucla/projects/partstamper/lib/lib/libio.a 
+smachine : /home/tmike/project/ucla/projects/partstamper/lib/lib/libmessage.a
+smachine : /home/tmike/project/ucla/projects/partstamper/lib/lib/libmemory.a
+smachine : /home/tmike/project/ucla/projects/partstamper/lib/lib/liblog.a
+smachine.o: smachine.c \
+  /home/tmike/project/ucla/projects/partstamper/include/message.h \
+  /home/tmike/project/ucla/projects/partstamper/include/process.h \
+  /home/tmike/project/ucla/projects/partstamper/include/memory.h \
+  /home/tmike/project/ucla/projects/partstamper/include/log.h \
+  /home/tmike/project/ucla/projects/partstamper/include/io.h \
+  /home/tmike/project/ucla/projects/partstamper/include/smachine.h \
+  /home/tmike/project/ucla/projects/partstamper/include/pstamper.h
+sm_states.o: sm_states.c \
+  /home/tmike/project/ucla/projects/partstamper/include/message.h \
+  /home/tmike/project/ucla/projects/partstamper/include/process.h \
+  /home/tmike/project/ucla/projects/partstamper/include/memory.h \
+  /home/tmike/project/ucla/projects/partstamper/include/log.h \
+  /home/tmike/project/ucla/projects/partstamper/include/io.h \
+  /home/tmike/project/ucla/projects/partstamper/include/smachine.h \
+  /home/tmike/project/ucla/projects/partstamper/include/pstamper.h
+sm_misc.o: sm_misc.c \
+  /home/tmike/project/ucla/projects/partstamper/include/message.h \
+  /home/tmike/project/ucla/projects/partstamper/include/process.h \
+  /home/tmike/project/ucla/projects/partstamper/include/log.h \
+  /home/tmike/project/ucla/projects/partstamper/include/io.h \
+  /home/tmike/project/ucla/projects/partstamper/include/pstamper.h
